@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PIGEON PRODUCTS</title>
+    <script lang="ja">
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+    
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace("active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += "active";
+}
+        var slideIndex = 0;
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 5000);
+}
+</script>
+    <div class="title">
+    <p>Pigeon Products</p>
+    </div>
+    <table>
+    <tr>
+    <th>
+    <div class="img_bar">
+    <ul>
+        <p><></p>
+        <br>
+        <br>
+        <li><a class="mein" href="index.html">HOME</a></li>
+        <br>
+        <br>
+        <li><a class="mein" href="shirts.html">SHIRTS</a></li>
+        <br>
+        <br>
+        <li><a class="mein" href="custom_orders.html">CUSTOM*ORDERS</a></li>
+        <br>
+        <br>
+        <li><a class="mein" href="my_story.html">ABOUT*US</a></li>
+        <br>
+        <br>
+        <li><a class="mein" href="last_page.html">CREDITS</a></li>
+        <br>
+        <br>
+        <p><></p>
+        </ul>
+       <div class="block"></div>
+    </div>
+            </th>
+    </tr>
+    </table>
+    
+    <link rel="stylesheet" href="style1.css" type="text/css">  
+    
+    <div class="slide_bar" onload="currentSlide(1)">
+        <span onloadstart="currentSlide(1)"></span>
+  <div class="slideshow-container" onLoad="currentSlide(1)">
+  <div class="mySlides fade">
+    <img src="Images/bricks_yes.JPG" style="width:100%" height="300px;">
+    </div>
+
+  <div class="mySlides fade">
+    <img src="Images/gus_in_action.JPG" style="width:100%" height="300px;">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="Images/anchor_yes.JPG" style="width:100%" height="300px;">
+  </div>
+</div>
+<br>
+
+<div style="text-align:center" onloadstart="currentSlide(1)">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+        
+    </div>
+    </head> 
+<body>
+    </body>
+</html>
